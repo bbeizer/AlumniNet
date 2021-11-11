@@ -1,0 +1,24 @@
+<%# Welcome Landing Page which user views once successfully authenticates and logs in using their user credentials
+If user has logged in, they will view navbar as well as a signout button. 
+If user has not logged in yet, they will view the log in and sign up buttons an not yet have access to the navbar%>
+<h1 style="color: #00008B" class="text-center"><b>Welcome To The Brandeis University Course Catalog!</b></h1>
+<% if logged_in? %>
+    <h4 class="text-center"><i>You are logged in, <%= current_user.username %>!</i></h4>
+
+    <div class = "d-flex align-items-center justify-content-center">
+         <%= button_to "Log Out", '/logout', method: :get%>
+   </div>
+
+   <% else %>
+   <h6 style="color: #088F8F" class="text-center"><b>Click the button below log in to your account. Don't have an account yet? Sign up now!</b></h6>
+     <div class = "d-flex align-items-center justify-content-center">
+        <%= button_to "Login To Account", '/login', method: :get%>
+     </div>
+
+    <div class = "d-flex align-items-center justify-content-center">
+         <%= button_to "Sign Up!", '/signup', method: :get%>
+    </div>
+<%end%>
+
+
+

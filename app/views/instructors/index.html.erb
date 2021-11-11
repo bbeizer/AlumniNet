@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div class = "d-flex align-items-center justify-content-center">
+<h1>Instructors</h1>
+</div>
+
+<div class = "d-flex align-items-center justify-content-center">
+<p>Below is a list containing all of the professors that teach courses at Brandeis University.</p>
+</div>
+
+<%= button_to "Log Out", '/logout', method: :get%>
+
+<div class = "d-flex align-items-center justify-content-center">
+<table>
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th>Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @instructors.each do |instructor| %>
+      <tr>
+        <td><%= instructor.first %></td>
+        <td><%= instructor.last %></td>
+        <td><%= instructor.id %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<br>
+</div>
+
