@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 2021_11_11_174156) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "catalogs", force: :cascade do |t|
+    t.string "course"
+    t.string "instructor"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "course_subjects", force: :cascade do |t|
     t.bigint "subject_id"
     t.bigint "course_id"
