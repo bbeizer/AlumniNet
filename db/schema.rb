@@ -10,27 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_11_174156) do
+ActiveRecord::Schema.define(version: 2021_11_12_200740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "alumnis", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "interests"
-    t.string "major"
-    t.string "employment"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "catalogs", force: :cascade do |t|
-    t.string "course"
-    t.string "instructor"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "course_subjects", force: :cascade do |t|
     t.bigint "subject_id"
@@ -66,16 +49,6 @@ ActiveRecord::Schema.define(version: 2021_11_11_174156) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "students", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "interests"
-    t.string "school"
-    t.string "major"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "subjects", force: :cascade do |t|
     t.string "name"
     t.string "ID"
@@ -93,6 +66,11 @@ ActiveRecord::Schema.define(version: 2021_11_11_174156) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password"
+    t.string "name"
+    t.string "email"
+    t.string "interests"
+    t.string "major"
+    t.string "gradyear"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

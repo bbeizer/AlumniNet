@@ -3,7 +3,17 @@
 one:
   username: MyString
   password: MyString
+  name: MyString
+  email: MyString
+  interests: MyString
+  major: MyString
+  gradyear: MyString
 
 two:
   username: MyString
   password: MyString
+  name: MyString
+  email: MyString
+  interests: MyString
+  major: MyString
+  gradyear: MyString

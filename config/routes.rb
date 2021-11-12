@@ -23,12 +23,7 @@ Rails.application.routes.draw do
 
   # get '/search_result', to: 'search#result'
 
-  get '/student_form', to: 'student#new'
-  post '/student_form', to: 'student#create'
   post '/', to: 'sessions#welcome'
-
-  get '/alumni_form', to: 'alumni#new'
-  post '/alumni_form', to: 'alumni#create'
 
   get '/enrolled_course', to: 'enrollments#index'
   post'/enroll/:course_id', to: 'enrollments#create'
