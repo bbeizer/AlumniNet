@@ -5,11 +5,16 @@ class AlumniController < ApplicationController
     end
 
     def create
-        @alumni = Alumnit.new(params[:alumni])
+        @alumni = Alumni.new(alum_params)
     end
 
     def show
         @alumni = Alumni.find(params[:id])
     end
+
+    def alum_params
+        params.require(:alumni).permit(:name, :email, :interests, :school, :major)
+    end
+
 end
 

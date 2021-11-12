@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 
   get '/student_form', to: 'student#new'
   post '/student_form', to: 'student#create'
+  post '/', to: 'sessions#welcome'
 
   get '/alumni_form', to: 'alumni#new'
   post '/alumni_form', to: 'alumni#create'
