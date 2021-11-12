@@ -20,10 +20,17 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/logout', to: 'sessions#destroy' 
   get '/search', to: 'search#search'
+
   # get '/search_result', to: 'search#result'
 
-   get '/enrolled_course', to: 'enrollments#index'
-   post'/enroll/:course_id', to: 'enrollments#create'
+  get '/student_form', to: 'student#new'
+  post '/student_form', to: 'student#create'
+
+  get '/alumni_form', to: 'alumni#new'
+  post '/alumni_form', to: 'alumni#create'
+
+  get '/enrolled_course', to: 'enrollments#index'
+  post'/enroll/:course_id', to: 'enrollments#create'
   get 'index/show'
   
 
