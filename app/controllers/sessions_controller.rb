@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
     
 
     def create
-        user = U.find_by(username: params[:session][:username].downcase)
-        if user && user.authenticate(params[:session][:password])
+        user = User.find_by(username: params[:session][:username].downcase)
+        if user&.authenticate(params[:session][:password])
            reset_session
            log_in user
            redirect_to '/welcome'

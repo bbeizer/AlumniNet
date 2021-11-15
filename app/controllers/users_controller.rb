@@ -9,12 +9,14 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            session[:user_id] = @user.id
-            redirect_to '/welcome'
+          reset_session
+          log_in @user
+          flash[:success] = "Welcome to AlumniNet!"
+          redirect_to '/'
         else
-            render 'new'
+          render 'new'
         end
-    end
+      end
 
     def show
         @user = User.find(params[:id])
