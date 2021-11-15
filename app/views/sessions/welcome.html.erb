@@ -6,6 +6,16 @@ If user has not logged in yet, they will view the log in and sign up buttons an 
 <% if logged_in? %>
     <h4 class="text-center"><i>You are logged in, <%= current_user.username %>!</i></h4>
 
+    <h6 class="text-center"><i>User Profile Details</i></h4>
+    <p class="text-center"><i>Username: <%= current_user.username %></i></p>
+    <p class="text-center"><i>Full Name: <%= current_user.name %></i></p>
+    <p class="text-center"><i>Email: <%= current_user.email %></i></p>
+    <p class="text-center"><i>Interests: <%= current_user.interests %></i></p>
+    <p class="text-center"><i>Major: <%= current_user.major %></i></p>
+    <p class="text-center"><i>Grad Year: <%= current_user.gradyear %></i></p>
+
+
+
     <div class = "d-flex align-items-center justify-content-center">
          <%= button_to "Log Out", '/logout', method: :get%>
    </div>
