@@ -10,12 +10,12 @@ Currently, students and alumni can create accounts, and put in their major, grad
 We want to add a "follow" button for students to follow alumni that they wish to "connect" with.
 We also want to add the ability to create a post, and then see it on your feed.
 
-##URL Patterns:
+## URL Patterns:
 - "/login" and "/signup" for login and signup
 - [Planned] "/posts/new" and "/posts/show" for creating a new post and seeing other posts
 - [Planned] "/users/show" and "/users/USERID/profile" for viewing a specific user's profile
 
-##DB Schema:
+## DB Schema:
 - Table Users:
     string "username"
     string "password"
@@ -36,12 +36,12 @@ We also want to add the ability to create a post, and then see it on your feed.
     string "text"
     integer "likes"
 
-##Planned Views:
+## Planned Views:
 - User (show other users, see a specific user's profile)
 - Feed (see a feed of posts from other users who you follow)
 - Post page (a form for creating a new post)
 
-##List of dependencies on APIs, gems, libraries and so on:
+## List of dependencies on APIs, gems, libraries and so on:
 - Requires webpacker
 - Requires bcrypt
 
