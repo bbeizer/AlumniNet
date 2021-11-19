@@ -1,3 +1,19 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+
+
+<% if logged_in? %>
+    <h4 class="text-center"><i>You are logged in, <%= current_user.username %>!</i></h4>
+<%end%>
+
+
+
+
+
+
+
 <p id="notice"><%= notice %></p>
 
 <div class = "d-flex align-items-center justify-content-center">
@@ -8,33 +24,44 @@
 <p>Below is a list containing all of the current students at Brandeis University.  Graduation year and major are also displayed.</p>
 </div>
 
-<%= button_to "Log Out", '/logout', method: :get%>
 
-
-<div class = "d-flex align-items-center justify-content-center">
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Code</th>
-      <th>Description</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Interests</th>
+      <th scope="col">Major</th>
+      <th scope="col">Graduation Year</th>
+      <th scope="col">Follow</th>
       <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.name %></td>
-        <td><%= course.Code %></td>
-        <td><%= course.Description %></td>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  
+  
+    <% @users.each do |user| %>
+      <tr scope="row">
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.interests %></td>
+        <td><%= user.major %></td>
+        <td><%= user.gradyear %></td>
+        <td>
+
+        <form>
+        <input value="Follow" type="submit"></input>
+        </form>
+        
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
- </div>
 
 
 
