@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :subjects
   resources :instructors
   resources :courses
+  resources :forum_threads do
+    resources :forum_posts, module: :forum_threads
+  end
 
   #root "instructors#index" #get "/instructors", to: "instructors#index"
 
