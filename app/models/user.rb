@@ -7,6 +7,7 @@ class User < ApplicationRecord
                       uniqueness: true
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }
+    validates :gradyear, presence: true, numericality: { only_integer: true }
   
     # Returns the hash digest of the given string.
     def User.digest(string)
