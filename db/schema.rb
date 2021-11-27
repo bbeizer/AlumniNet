@@ -48,6 +48,13 @@ ActiveRecord::Schema.define(version: 2021_11_27_002728) do
     t.index ["u_id"], name: "index_enrollments_on_u_id"
   end
 
+  create_table "followers", force: :cascade do |t|
+    t.string "from"
+    t.string "to"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "forum_posts", force: :cascade do |t|
     t.integer "forum_thread_id"
     t.integer "user_id"
