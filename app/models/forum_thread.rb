@@ -4,5 +4,6 @@ class ForumThread < ApplicationRecord
     has_many :users, through: :forum_posts
 
     accepts_nested_attributes_for :forum_posts
+    validates_associated :forum_posts
     
 end

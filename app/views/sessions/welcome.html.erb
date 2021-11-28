@@ -10,6 +10,13 @@ If user has not logged in yet, they will view the log in and sign up buttons an 
 <h1 style="color: #00008B" class="text-center"><b>Welcome to AlumniNet!</b></h1>
 <h4 style="color: #7787b1" class="text-center"><i>We are the premier social network for Brandeis students seeking connections with Brandeis alumni!</i></h4>
 <% if logged_in? %>
+     <% if current_user.gradyear.to_i < 2021 %>
+     <h6 class="text-center"><i>Alumni</i></h1>
+     <% else %>
+     <h6 class="text-center"><i>Student</h1>
+      <%end%>
+
+
     <h4 class="text-center"><i>You are logged in, <%= current_user.username %>!</i></h4>
 
     <h6 class="text-center"><i>User Profile Details</i></h4>

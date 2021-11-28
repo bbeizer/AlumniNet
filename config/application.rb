@@ -1,11 +1,10 @@
 require_relative "boot"
-
+require 'record_tag_helper'
 require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-
 module RailsPA1
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.

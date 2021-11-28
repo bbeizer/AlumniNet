@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :messages
+  resources :conversations
   resources :followers
   resources :subjects
   resources :instructors
