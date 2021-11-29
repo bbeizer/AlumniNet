@@ -1,4 +1,16 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
 <p id="notice"><%= notice %></p>
+
+<% if logged_in? %>
+    <h4 class="text-center"><i>You are logged in</h4>
+    <h3 id="currentuser"><%= current_user.username %></h3>
+<%end%>
+
+
+<p id="followercount"></p>
 
 <h1>Following</h1>
 <p>Here is a list of the users you are following.</p>
@@ -15,8 +27,8 @@
   <tbody>
     <% @followers.each do |follower| %>
       <tr>
-        <td><%= follower.from %></td>
-        <td><%= follower.to %></td>
+        <td class="fromcell"><%= follower.from %></td>
+        <td class="tocell"><%= follower.to %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,3 +37,20 @@
 <br>
 
 <%= link_to 'New Follower', new_follower_path %>
+
+
+<script>
+
+user=document.getElementById("currentuser").innerHTML;
+followercount=0
+
+$('.tocell').each(function(){
+  followed=$(this)[0].innerText;
+  if(followed == user){
+    followercount++;
+  }
+})
+
+document.getElementById("followercount").innerText="You currently have " + followercount + " followers!";
+
+</script>
