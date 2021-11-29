@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   root 'sessions#welcome'
 
   #users routes
-  resources :users, only: [:new, :create, :edit, :update, :show, :destroy]
+  resources :users
+  get '/alumni', to: 'users#alumni'
+  get '/student', to: 'users#student'
   resources :enrollments
 
   #session routes
@@ -27,6 +29,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/logout', to: 'sessions#destroy' 
   get '/search', to: 'search#search'
+
 
   # get '/search_result', to: 'search#result'
 

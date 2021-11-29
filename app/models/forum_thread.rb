@@ -5,5 +5,6 @@ class ForumThread < ApplicationRecord
 
     accepts_nested_attributes_for :forum_posts
     validates_associated :forum_posts
+    validates :subject, presence: true
     
 end

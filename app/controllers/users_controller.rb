@@ -4,6 +4,13 @@ class UsersController < ApplicationController
         @user = User.new
     end
 
+    def alumni
+      @alumni = User.where("gradyear < ?", "2022")
+    end
+
+    def student
+      @student = User.where("gradyear > ?", "2021")
+    end
 
     def create
         @user = User.new(user_params)
