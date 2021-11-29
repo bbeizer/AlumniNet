@@ -14,7 +14,10 @@
  *= require_self
  */
 
+ /* 
+ No idea why this line in particular messes up heroku but it does
  @import "bootstrap";
+ */
 
 .forum_post {
   border-top: 1px solid #ccc;
