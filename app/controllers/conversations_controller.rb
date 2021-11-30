@@ -5,7 +5,7 @@ class ConversationsController < ApplicationController
     end
 
     def show
-      @conversations = current_user.mailbox.conversations.find(params[:id])
+      @conversation = current_user.mailbox.conversations.find(params[:id])
     end
 
     def new
