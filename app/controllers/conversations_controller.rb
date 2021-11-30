@@ -1,19 +1,27 @@
 class ConversationsController < ApplicationController
   
     def index
-      @users = User.all
-      @conversations = Conversation.all
+      @conversations = current_user.mailbox.conversations
     end
-    def create  
-      if Conversation.between(params[:sender_id], params[:recipient_id]).present? 
-         @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
-      else
-         @conversation = Conversation.create!(conversation_params)
-      end
-      redirect_to conversation_messages_path(@conversation)
+
+    def show
+      @conversations = current_user.mailbox.conversations.find(params[:id])
     end
-    private
-    def conversation_params
-      params.permit(:sender_id, :recipient_id)
+
+    def new
+      @recipients = User.all - [current_user]
+      # if current_user.gradyear.to_i > 2021
+      # @recipients = User.where("gradyear < ?", "2022") -[current_user]
+      # else
+      # @recipients = User.where("gradyear > ?", "2021") - [current_user]
+      # end 
     end
+
+    def create
+      recipient = User.find(params[:user_id])
+      receipt = current_user.send_message(recipient, params[:body], params[:subject])
+      redirect_to conversation_path(receipt.conversation)
+    end
+
+
 end

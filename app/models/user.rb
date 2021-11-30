@@ -16,6 +16,13 @@ class User < ApplicationRecord
       BCrypt::Password.create(string, cost: cost)
     end
 
+    def mailboxer_email(object)
+      nil 
+    end
+
     has_many :forum_threads
     has_many :forum_posts 
+    acts_as_messageable
+
+
   end

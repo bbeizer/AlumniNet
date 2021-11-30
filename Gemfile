@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'record_tag_helper'
 gem 'bcrypt', '~> 3.1.7'
 gem 'local_time'
+gem 'mailboxer'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :messages
-  resources :conversations
+
   resources :followers
   resources :subjects
   resources :instructors
@@ -9,6 +8,9 @@ Rails.application.routes.draw do
   resources :forum_threads do
     resources :forum_posts, module: :forum_threads
   end
+  resources :conversations do
+    resources :messages
+  end 
 
   #root "instructors#index" #get "/instructors", to: "instructors#index"
 
