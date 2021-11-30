@@ -9,12 +9,11 @@ class ConversationsController < ApplicationController
     end
 
     def new
-      @recipients = User.all - [current_user]
-      # if current_user.gradyear.to_i > 2021
-      # @recipients = User.where("gradyear < ?", "2022") -[current_user]
-      # else
-      # @recipients = User.where("gradyear > ?", "2021") - [current_user]
-      # end 
+       if current_user.gradyear.to_i > 2021
+      @recipients = User.where("gradyear < ?", "2022") -[current_user]
+      else
+      @recipients = User.where("gradyear > ?", "2021") - [current_user]
+      end 
     end
 
     def create
