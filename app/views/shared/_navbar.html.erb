@@ -14,13 +14,15 @@ There are tabs to view a list of instrcutos, courses taught, a search page to lo
           <li class="nav-item">
             <a class="nav-link" href="/courses" style= "color: #FFFFFF"><b>All Users</a></b>
           </li>
+          <% if current_user.gradyear.to_i > 2021 %>
            <li class="nav-item">
             <a class="nav-link" href="/alumni" style= "color: #FFFFFF"><b>Alumni Directory</a></b>
           </li>
-
+          <% else %>
            <li class="nav-item">
             <a class="nav-link" href="/student" style= "color: #FFFFFF"><b>Student Directory</a></b>
-          </li>                          
+          </li>
+          <% end %>                           
            <li class="nav-item">
             <a class="nav-link" href="/forum_threads" style= "color: #FFFFFF"><b>Community Forum</a></b>
           </li>   
