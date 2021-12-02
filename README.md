@@ -7,14 +7,20 @@ Link to Heroku: https://sleepy-escarpment-10704.herokuapp.com
 AlumniNet is a social networking website for Brandeis students to connect with Brandeis alumni.  
 
 Currently, students and alumni can create accounts, and put in their major, graduation year, and interests.
-We want to add a "follow" button for students to follow alumni that they wish to "connect" with.
-We also want to add the ability to create a post, and then see it on your feed.
 
-## Deployment
-This project utilizes continuous deployment through heroku and GitHub.  Every time a collaborator pushes to the github, it will trigger a new deployment to our heroku website.
+The features we have implemented are as follows:
+All_Users: A directory that lists all users both alumni and students that are affiliated with the platform.
+Alumni/User Directory: A directory for students to view all alumni info and alumni to view all students info.
+Conversations: A messaging chat feature where students can chat with alumni about topics of interest as a DM
+Community Forum: A global forum where users can start threads about popular topics of interests and/or questions that can be answered by alumni to benefit the entire AlumniNet community.
+Connections: A profile page where the current logged in user can view both their followers and people they follow. There is also a direct link next to each user the current logged in user follows that can be clikced to directly message them.
+Logout: Simple logout functionality included in navbar.
 
-## Testing
-All tests for this project are stored in the rails testing directory.
+
+For the stage 4, we worked on polishing all of our features listed above so that they work succesfully, as well as cleaned up any unused code/files we did not need, but for the final deliverable coming up soon, we Will be working on cleaning up the UI and stylistic aspects of the code for the final deliverable, as all the major features are now implemented. We will also be working on more testing, cleaning/commenting our code, and including a poro.
+
+
+
 
 ## URL Patterns:
 - "/login" and "/signup" for login and signup
