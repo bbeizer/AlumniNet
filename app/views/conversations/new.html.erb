@@ -24,11 +24,11 @@
 
 <script>
 
-const queryString = window.location.search;
+queryString = window.location.search;
 
-const urlParams = new URLSearchParams(queryString);
+urlParams = new URLSearchParams(queryString);
 
-const other = urlParams.get('other');
+other = urlParams.get('other');
 
 if(other.length > 0){
   opt=document.createElement("option");
