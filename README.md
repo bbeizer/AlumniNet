@@ -26,6 +26,10 @@ For the stage 4, we worked on polishing all of our features listed above so that
 - "/login" and "/signup" for login and signup
 - [Planned] "/posts/new" and "/posts/show" for creating a new post and seeing other posts
 - [Planned] "/users/show" and "/users/USERID/profile" for viewing a specific user's profile
+- /Alumi Page of All the Alumni
+- /Student Page of All the Students
+- /Conversation page for sending a message to a possible person
+- /forum_thread page for forum threads
 
 ## DB Schema:
 - Table Users:
