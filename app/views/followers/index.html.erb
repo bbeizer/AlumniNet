@@ -9,13 +9,18 @@
     <h3 id="currentuser"><%= current_user.username %></h3>
 <%end%>
 
-
+<strong>
 <p id="followercount"></p>
+</strong>
+<p id="followerlist"></p>
 
-<h1>Following</h1>
-<p>Here is a list of the users you are following.</p>
+<strong>
+<p id="followingcount"></p>
+</strong>
+<p id="followinglist"></p>
 
-<table>
+
+<table id="followertable" style="display:none">
   <thead>
     <tr>
       <th>From</th>
@@ -36,21 +41,43 @@
 
 <br>
 
-<%= link_to 'New Follower', new_follower_path %>
 
 
 <script>
 
 user=document.getElementById("currentuser").innerHTML;
 followercount=0
+followingcount=0
+i=0
+followertext=" follows you!"
+followingtext="You follow "
 
-$('.tocell').each(function(){
-  followed=$(this)[0].innerText;
-  if(followed == user){
-    followercount++;
+var table = document.getElementById("followertable");
+for (var i = 0, row; row = table.rows[i]; i++) {
+   fromuser = row.children[0].innerText;
+   touser = row.children[1].innerText;
+   if(fromuser == user){
+    followingcount++;
+    followingtext=followingtext + touser + ", ";
   }
-})
+  if(touser == user){
+    followercount++;
+    followertext=fromuser + ", " + followertext
+  }
+}
+
+
+if(followercount==0){
+  followertext="No one follows you!"
+}
+if(followingcount==0){
+  followingtext="You follow no one!"
+}
 
 document.getElementById("followercount").innerText="You currently have " + followercount + " followers!";
+document.getElementById("followerlist").innerText=followertext;
+
+document.getElementById("followingcount").innerText="You currently follow " + followingcount + " people!";
+document.getElementById("followinglist").innerText=followingtext;
 
 </script>

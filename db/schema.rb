@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2021_11_30_015157) do
     t.string "subject"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "username"
   end
 
   create_table "instructors", id: false, force: :cascade do |t|
