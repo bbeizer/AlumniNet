@@ -9,15 +9,19 @@
     <h3 id="currentuser"><%= current_user.username %></h3>
 <%end%>
 
+
+<h1>Connections</h1>
+<p>This is your connections page, where you will see both your followers and the people you follow.  Click on a name to start a conversation with a connection!</p>
+
 <strong>
 <p id="followercount"></p>
 </strong>
-<p id="followerlist"></p>
+<div id="followerlist"></div>
 
 <strong>
 <p id="followingcount"></p>
 </strong>
-<p id="followinglist"></p>
+<div id="followinglist"></div>
 
 
 <table id="followertable" style="display:none">
@@ -49,8 +53,6 @@ user=document.getElementById("currentuser").innerHTML;
 followercount=0
 followingcount=0
 i=0
-followertext=" follows you!"
-followingtext="You follow "
 
 var table = document.getElementById("followertable");
 for (var i = 0, row; row = table.rows[i]; i++) {
@@ -58,11 +60,21 @@ for (var i = 0, row; row = table.rows[i]; i++) {
    touser = row.children[1].innerText;
    if(fromuser == user){
     followingcount++;
-    followingtext=followingtext + touser + ", ";
+    var btn = document.createElement("a");
+    btn.href = "/conversations/new?other=" + touser;
+    btn.innerText=touser
+    document.getElementById("followinglist").appendChild(btn);  
+    br=document.createElement("br");
+    document.getElementById("followinglist").appendChild(br); 
   }
   if(touser == user){
     followercount++;
-    followertext=fromuser + ", " + followertext
+    var btn = document.createElement("a");
+    btn.href = "/conversations/new?other=" + fromuser;
+    btn.innerText=fromuser
+    document.getElementById("followerlst").appendChild(btn);  
+    br=document.createElement("br");
+    document.getElementById("followerlist").appendChild(br); 
   }
 }
 
@@ -75,9 +87,9 @@ if(followingcount==0){
 }
 
 document.getElementById("followercount").innerText="You currently have " + followercount + " followers!";
-document.getElementById("followerlist").innerText=followertext;
+
 
 document.getElementById("followingcount").innerText="You currently follow " + followingcount + " people!";
-document.getElementById("followinglist").innerText=followingtext;
+
 
 </script>
