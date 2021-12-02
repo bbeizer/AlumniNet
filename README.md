@@ -47,13 +47,31 @@ For the stage 4, we worked on polishing all of our features listed above so that
     string "owner"
     string "text"
     integer "likes"
+- Table Forum Thread
+    integer "user id"
+    string "subject
+- Table Forum Posts
+  integer "Forum Thread ID
+  integer "Forum Post ID
+  text    "Body"
+- Messages
+- Mailboxer
+- Conversation
+  integer "Sender id"
+  integer "Recipient id"
+    
+    
+    
 
 ## Planned Views:
 - User (show other users, see a specific user's profile)
 - Feed (see a feed of posts from other users who you follow)
 - Post page (a form for creating a new post)
+- Forum Pages for everyone on the app to post questions with a subjet
 
 ## List of dependencies on APIs, gems, libraries and so on:
 - Requires webpacker
 - Requires bcrypt
+- Requires mailboxer gem
+- Requires local time gem
 
