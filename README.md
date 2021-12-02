@@ -10,6 +10,12 @@ Currently, students and alumni can create accounts, and put in their major, grad
 We want to add a "follow" button for students to follow alumni that they wish to "connect" with.
 We also want to add the ability to create a post, and then see it on your feed.
 
+## Deployment
+This project utilizes continuous deployment through heroku and GitHub.  Every time a collaborator pushes to the github, it will trigger a new deployment to our heroku website.
+
+## Testing
+All tests for this project are stored in the rails testing directory.
+
 ## URL Patterns:
 - "/login" and "/signup" for login and signup
 - [Planned] "/posts/new" and "/posts/show" for creating a new post and seeing other posts
