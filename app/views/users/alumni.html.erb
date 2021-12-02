@@ -7,7 +7,7 @@
    <div>
    <%= alumni.name %>
    <%= alumni.email %>
-   <a href="/conversations/new?other=<%= alumni.name %>">Message</a>
+   <%= link_to "message", conversations_path, class: 'button' %>
    </div>
    <br>
 
