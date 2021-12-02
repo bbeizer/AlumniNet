@@ -1,11 +1,18 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+
 <h1>Student</h1>
 
 <% @student.each do |student| %>
-   <br>
+   <div>
    <%= student.name %>
    <%= student.email %>
-   <button type="button">message</button>
+   <a href="/conversations/new?other=<%= student.name %>">Message</a>
+   <div>
    <br>
 
 
 <%end %>
+

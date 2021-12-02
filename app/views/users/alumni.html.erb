@@ -1,10 +1,17 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
 <h1>Alumni</h1>
 <% @alumni.each do |alumni| %>
-   <br>
+   <div>
    <%= alumni.name %>
    <%= alumni.email %>
-   <button type="button">message</button>
+   <a href="/conversations/new?other=<%= alumni.name %>">Message</a>
+   </div>
    <br>
 
 
 <%end %>
+
+
