@@ -32,7 +32,7 @@
 </div>
 
 
-<table class="table">
+<table class="table" id="mytab1">
   <thead>
     <tr>
       <th scope="col">Name</th>
@@ -82,6 +82,14 @@
 var currentuser = document.getElementById("currentuser").innerHTML;
 $('.user').attr("value",currentuser);
 
-
+var table = document.getElementById("mytab1");
+for (var i = 0, row; row = table.rows[i]; i++) {
+   for (var j = 0, col; col = row.cells[j]; j++) {
+     t=col.innerText;
+     if(t=="Rasvik"){
+	row.remove();
+     }
+   }  
+}
 
 </script>
