@@ -16,8 +16,12 @@ If user has not logged in yet, they will view the log in and sign up buttons an 
      <h6 class="text-center"><i>Student</h1>
       <%end%>
 
-
-    <h4 class="text-center"><i>You are logged in, <%= current_user.username %>!</i></h4>
+      <% if logged_in? %>
+      <br>
+      <div style="font-style:italic; font-weight:bold">
+          <p >You are logged in as <%= current_user.username %> </p>
+      </div>
+      <%end%>
 
     <h6 class="text-left"><i>User Profile Details</i></h4>
     <p class="text-left"><i>Username: <%= current_user.username %></i></p>
