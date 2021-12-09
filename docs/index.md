@@ -31,6 +31,6 @@ Diagram of the MVC Architecture of the Product<img width="747" alt="Screen Shot 
 
 [Future work](futurework.md)
 
-Image file for Brandeis Text Files
-<img width="200" alt="Screen Shot 2021-12-09 at 3 11 42 PM" src="https://user-images.githubusercontent.com/55194773/145470156-5e284864-5527-4c12-bfb1-d5a4d2d38cca.png">
 
+<img width="200" alt="Screen Shot 2021-12-09 at 3 11 42 PM" src="https://user-images.githubusercontent.com/55194773/145470156-5e284864-5527-4c12-bfb1-d5a4d2d38cca.png">
+Image file for Brandeis Text Files
