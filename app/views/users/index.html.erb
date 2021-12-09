@@ -34,6 +34,15 @@
 <p>Below is a list containing all of the current students at Brandeis University.  Graduation year and major are also displayed.</p>
 </div>
 
+<form action="/users" method="get">
+
+<input type="text" name="term" id="term" placeholder="Type to search">
+
+<input type="submit" value="Submit">
+
+</form>
+
+
 
 <table class="table" id="mytab1">
   <thead>
@@ -102,5 +111,20 @@ for (var i = 0, row; row = table.rows[i]; i++) {
      }
    }  
 }
+
+
+query = window.location.search;
+
+//Get search terms from URL
+urlParams = new URLSearchParams(query);
+searchterm=urlParams.get('term');
+
+//Remove all search rows that do not contain the given search term
+var allRows = $('.table tbody tr');
+        allRows.each(function(){
+            if( ! $(this).is(':contains("'+searchterm+'")'))  {
+                $(this).css({"display":"none"});
+            }
+        });
 
 </script>
