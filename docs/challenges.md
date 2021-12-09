@@ -2,9 +2,15 @@
 
 Over the course of this semester, we encountered many challenges in developing our application.
 
+Working in a team and figuring out how to divide work and schedule time
+
 First, because many of us were new to using ruby, we encountered many small errors, which we had to ask for help to fix.
 
 For example, when developing a new feature, we would often get errors such as "Nil Method" when we try to implement certain actions.
+
+When we watched tutorials on how to implement certain feautes, some of the gems or methods were discontinued and it was challenging finding a workaround
+
+
 
 
 # Posts and Conversations
