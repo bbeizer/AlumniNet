@@ -13,7 +13,9 @@ The purpose of AlumniNet is to facilitate alumni connections between Brandeis st
 ## Features
 
 [Forums and Posts](posts.md)
+
 [User Directory](directory.md)
+
 [Conversations](conversations.md)
 
 ## Challenges
