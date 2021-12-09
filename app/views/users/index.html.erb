@@ -119,6 +119,10 @@ query = window.location.search;
 urlParams = new URLSearchParams(query);
 searchterm=urlParams.get('term');
 
+if(searchterm == null){
+  searchterm=""
+}
+
 //Remove all search rows that do not contain the given search term
 var allRows = $('.table tbody tr');
         allRows.each(function(){
