@@ -7,25 +7,41 @@
 <%# Welcome Landing Page which user views once successfully authenticates and logs in using their user credentials
 If user has logged in, they will view navbar as well as a signout button. 
 If user has not logged in yet, they will view the log in and sign up buttons an not yet have access to the navbar%>
-<h1 style="color: #00008B" class="text-center"><b>Welcome to AlumniNet!</b></h1>
+<h1 style="font-family: Merriweather; color: #00008B" class="text-center"><b>Welcome to the Brandeis AlumniNet!</b></h1>
 <h4 style="color: #7787b1" class="text-center"><i>We are the premier social network for Brandeis students seeking connections with Brandeis alumni!</i></h4>
 <% if logged_in? %>
      <% if current_user.gradyear.to_i < 2021 %>
      <h6 class="text-center"><i>Alumni</i></h1>
+      <h5 class="text-center"><i>Alumni: You are logged in, <%= current_user.username %>!</i></h5>
      <% else %>
-     <h6 class="text-center"><i>Student</h1>
+      <h5 class="text-center"><i>Student: You are logged in, <%= current_user.username %>!</i></h5>
       <%end%>
 
 
-    <h4 class="text-center"><i>You are logged in, <%= current_user.username %>!</i></h4>
+    <table class="table" id="mytab2">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Interests</th>
+      <th scope="col">Major</th>
+      <th scope="col">Graduation Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  
 
-    <h6 class="text-left"><i>User Profile Details</i></h4>
-    <p class="text-left"><i>Username: <%= current_user.username %></i></p>
-    <p class="text-left"><i>Full Name: <%= current_user.name %></i></p>
-    <p class="text-left"><i>Email: <%= current_user.email %></i></p>
-    <p class="text-left"><i>Interests: <%= current_user.interests %></i></p>
-    <p class="text-left"><i>Major: <%= current_user.major %></i></p>
-    <p class="text-left"><i>Grad Year: <%= current_user.gradyear %></i></p>
+    <h4 class="text-center"><i>User Profile Details</i></h4>
+    <td><%= current_user.username %></td>
+    <td><%= current_user.name %></td>
+    <td><%= current_user.email %></td>
+    <td><%= current_user.interests %></td>
+    <td><%= current_user.major %></td>
+    <td><%= current_user.gradyear %></td>
 
    <% else %>
    <h6 style="color: #088F8F" class="text-center"><b>Click the button below log in to your account. Don't have an account yet? Sign up now!</b></h6>
