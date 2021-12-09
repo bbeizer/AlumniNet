@@ -10,6 +10,15 @@ class FollowersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+
+  test "should create follower entry" do
+    assert_difference('Follower'.count) do
+      follower :create, follower: {from: '1', to: '2'}
+    end
+    assert_redirected_to follower_path(assigns(:follower))
+    assert_equal 'Follower entry was successfully created.', flash[:notice]
+  end
+
   test "should get new" do
     get new_follower_url
     assert_response :success

@@ -1,7 +1,16 @@
-<%# The NavBar Implementation that users will get access to once logged into their account. 
-There are tabs to view a list of instrcutos, courses taught, a search page to look for and enroll in courses, and an enrolled courses page to view all enrolled courses.%>
-<% if logged_in? %>
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #96A1A7;">
+
+<head>
+
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #088F8F;">
     <div class="container-fluid">
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
@@ -14,15 +23,6 @@ There are tabs to view a list of instrcutos, courses taught, a search page to lo
           <li class="nav-item">
             <a class="nav-link" href="/users" style= "color: #FFFFFF"><b>All Users</a></b>
           </li>
-          <% if current_user.gradyear.to_i > 2021 %>
-           <li class="nav-item">
-            <a class="nav-link" href="/alumni" style= "color: #FFFFFF"><b>Alumni Directory</a></b>
-          </li>
-          <% else %>
-           <li class="nav-item">
-            <a class="nav-link" href="/student" style= "color: #FFFFFF"><b>Student Directory</a></b>
-          </li>
-          <% end %>
            <li class="nav-item">
             <a class="nav-link" href="/conversations" style= "color: #FFFFFF"><b>Conversation</a></b>
           </li>                             
@@ -42,5 +42,15 @@ There are tabs to view a list of instrcutos, courses taught, a search page to lo
         </ul>
       </div>
     </div>
-    <%end%>
    </nav>
+
+
+
+<p>Here is an embedded feedback page that you can fill out to provide us with your questions, comments, and concerns!</p>
+
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexE_w4arzXxUIJ1D3TN_vMz6yy6oED2GkPITWEye-mwOYkWA/viewform?embedded=true" width="640" height="407" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+
+
+</body>
