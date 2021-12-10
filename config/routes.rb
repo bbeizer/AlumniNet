@@ -36,9 +36,6 @@ Rails.application.routes.draw do
   # get '/search_result', to: 'search#result'
 
   post '/', to: 'sessions#welcome'
-
-  get '/enrolled_course', to: 'enrollments#index'
-  post'/enroll/:course_id', to: 'enrollments#create'
   get 'index/show'
   
 
