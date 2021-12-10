@@ -1,9 +1,13 @@
 <h1>My Inbox</h1>
 <h1>All Conversations:</h1>
 <% @conversations.each do |conversation| %>
+<tr>
 <div>
-    <%= link_to conversation.subject, conversation_path(conversation)%>
+    <td>Subject: </td>
+    <td> <%=conversation.subject%><td>
+    <td><%= link_to "Message", conversation_path(conversation)%></td>
     </div>
+</tr>
     <%end%>
-    <%= link_to "New Conversation", new_conversation_path%>
+    <%= button_to "New Conversation", new_conversation_path%>
  
