@@ -1,5 +1,7 @@
 <%# The form for users to sign up to create an account if they do not already have one. %>
-<h1>Sign Up</h1>
+<h1 style="font-family: Merriweather; color: #00008B" class="text-center"><b>Sign Up</b></h1>
+<h6 style="font-family: Georgia; color: #7787b1 border:2px; border-style:solid; border-color:#96A1A7; padding: 1em;" class="text-center">Don't have an account yet? Sign up here! Enter your personal details to create your account and start using AlumniNet now! </h6>
+<div class = "d-flex align-items-center justify-content-center">
 <%= form_for(:user, url: users_path) do |f|%>
   <%= f.label :username%>
   <%= f.text_field :username%>
@@ -21,7 +23,7 @@
 
   <%= f.submit %>
 <%end%>
-
+</div>
 
 
 

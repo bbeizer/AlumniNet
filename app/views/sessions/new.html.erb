@@ -1,6 +1,6 @@
 <% provide(:title, "Log in") %>
-<h1 style="color: #00008B" class="text-center">Student/Alumni User Log In</h1>
-<h6 class="text-center"> Current students and alumni, please sign into your account user your log in credentials.</h6> 
+<h1 style="font-family: Merriweather; color: #00008B" class="text-center"><b>Student/Alumni User Log In</b></h1>
+<h6 style="font-family: Georgia; color: #7787b1 border:3px; border-style:solid; border-color:#96A1A7; padding: 1em;" class="text-center"> Current students and alumni, please sign into your account user your log in credentials.</h6> 
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -12,10 +12,10 @@
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+      <%= f.submit "Log in", class: "btn btn-primary"%>
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p style="font-family: Georgia; ">New user? <%= link_to "Sign up now!", signup_path %></p>
   </div>
 </div>
 

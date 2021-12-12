@@ -10,13 +10,7 @@
 
 
 
-<% if logged_in? %>
-<br>
-<div style="font-style:italic; font-weight:bold">
-    <p >You are logged in as <%= current_user.username %> </p>
-</div>
-<p style="display:none" id="currentuser"><%= current_user.username %></p>
-<%end%>
+
 
 
 
@@ -27,16 +21,17 @@
 <p id="notice"><%= notice %></p>
 
 <div class = "d-flex align-items-center justify-content-center">
-<h1>User Directory</h1>
+<h1 style="font-family: Merriweather; color: #00008B;" class="text-center"><b>User Directory</b></h1>
 </div>
 
 <div class = "d-flex align-items-center justify-content-center">
-<p>Below is a list containing all of the current students at Brandeis University.  Graduation year and major are also displayed.</p>
+<h6 style="font-family: Georgia; color: #7787b1 border:2px; border-style:solid; border-color:#96A1A7; padding: 1em;" class="text-center">Below is a list containing all of the current students at Brandeis University. Graduation year and major are also displayed.</h6>
 </div>
 
+<h5 style="font-family: Merriweather; color: #00008B;"><b>Search</b></h5>
 <form action="/users" method="get">
 
-<input type="text" name="term" id="term" placeholder="Type to search">
+<input type="text" name="term" id="term" placeholder="Type to search for users">
 
 <input type="submit" value="Submit">
 
@@ -44,7 +39,8 @@
 
 
 
-<table class="table" id="mytab1">
+
+<table class="table" style="font-family: Merriweather" id="mytab1">
   <thead>
     <tr>
       <th scope="col">Name</th>
