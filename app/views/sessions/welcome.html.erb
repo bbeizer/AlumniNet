@@ -12,10 +12,11 @@ If user has not logged in yet, they will view the log in and sign up buttons an 
 <% if logged_in? %>
      <% if current_user.gradyear.to_i < 2022 %>
      <h6 class="text-center"><i>Alumni</i></h1>
-      <h5 style= "font-family: Georgia;" class="text-center">Alumni: You are logged in, <%= current_user.username %>!</h5>
-     <% else %>
-      <h5 style= "font-family: Georgia;" class="text-center">Student: You are logged in, <%= current_user.username %>!</h5>
-      <%end%>
+      <% else %>
+     <h6 class="text-center"><i>Student</i></h1>
+     <%end%>
+
+      <h5 style= "font-family: Georgia;" class="text-center">You are logged in, <%= current_user.username %>!</h5>
 
 
     <table class="table" style="font-family: Merriweather; color: #36454F" id="mytab2">
@@ -33,10 +34,8 @@ If user has not logged in yet, they will view the log in and sign up buttons an 
   <tbody>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-  
 
     <h4 style="font-family: Merriweather; color: #00008B"class="text-center"><b>User Profile Details</b></h4>
-    
     <td><%= current_user.username %></td>
     <td><%= current_user.name %></td>
     <td><%= current_user.email %></td>
