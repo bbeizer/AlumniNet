@@ -70,7 +70,7 @@
         <form action="/followers" method="post">
 
         <input style="display:none" type="text" name="otheruser" id="otheruser" value='<%= user.name %>'>
-        <input class="user" style="display:none" type="text" name="thisuser" id="thisuser" value=''>
+        <input class="user" style="display:none" type="text" name="thisuser" id="thisuser" value='<%= current_user.username %>'>
 
 
           <input value="Follow" type="submit"></input>
