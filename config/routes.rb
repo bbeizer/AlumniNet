@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/logout', to: 'sessions#destroy' 
   get '/search', to: 'search#search'
+  post '/conversations/new', to:  'conversations#new'
 
 
   # get '/search_result', to: 'search#result'
