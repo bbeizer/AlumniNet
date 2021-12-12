@@ -31,14 +31,12 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/logout', to: 'sessions#destroy' 
   get '/search', to: 'search#search'
+  post '/conversations/new', to:  'conversations#new'
 
 
   # get '/search_result', to: 'search#result'
 
   post '/', to: 'sessions#welcome'
-
-  get '/enrolled_course', to: 'enrollments#index'
-  post'/enroll/:course_id', to: 'enrollments#create'
   get 'index/show'
   
 

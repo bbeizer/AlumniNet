@@ -2,6 +2,15 @@ class ConversationsController < ApplicationController
   
     def index
       @conversations = current_user.mailbox.conversations
+     # @recipients = Array.new
+      #for c in @conversations do  
+      #c.receipts_for(current_user).each do |receipt|
+        #if receipt.message.sender.name != current_user.name
+          #@recipients.push(receipt.message.sender.name)
+          #break
+        #end
+      #end
+    #end
     end
 
     def show

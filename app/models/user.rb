@@ -6,8 +6,11 @@ class User < ApplicationRecord
                       format: { with: VALID_EMAIL_REGEX },
                       uniqueness: true
     has_secure_password
+    acts_as_messageable
     validates :password, presence: true, length: { minimum: 6 }
     validates :gradyear, presence: true, numericality: { only_integer: true }
+    has_many :forum_threads
+    has_many :forum_posts
   
     # Returns the hash digest of the given string.
     def User.digest(string)
@@ -19,10 +22,4 @@ class User < ApplicationRecord
     def mailboxer_email(object)
       nil 
     end
-
-    has_many :forum_threads
-    has_many :forum_posts 
-    acts_as_messageable
-
-
   end
