@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -8,14 +7,26 @@
 
 
 
-<h1>My Inbox</h1>
-<h1>All Conversations:</h1>
+<h1 style="font-family: Merriweather; color: #00008B" class="text-center"><b>My Inbox</b></h1>
+
+<div class = "d-flex align-items-center justify-content-center">
+<h6 style="font-family: Georgia; color: #7787b1 border:2px; border-style:solid; border-color:#96A1A7; padding: 1em;" class="text-center">Want to start a conversation with someone? Click the button below to start chatting. View a history of all your conversations with other students and alumni in your message inbox below. </h6>
+</div>
+
+<table class="table" style="font-family: Merriweather; color: #36454F" id="mytab3">
+ <thead>
+ <tr scope>
+      <th scope="col">Subject</th>
+      <th style="text-align:right" scope="col" colspan="3">Link to View Message</th>
+      
+</tr>
+</thead>
+<h4 style="font-family: Merriweather; color: #00008B"class="text-center"><b>All Conversations</b></h4>
 <% @conversations.each do |conversation| %>
 <tr>
 <div>
-    <td>Subject: </td>
     <td> <%=conversation.subject%><td>
-    <td><%= link_to "Message", conversation_path(conversation)%></td>
+    <td style="text-align:right"><%= link_to "View Message!", conversation_path(conversation)%></td>
     </div>
 </tr>
     <%end%>

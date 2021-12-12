@@ -1,4 +1,17 @@
-<h1>Conversations</h1>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<h1 style="font-family: Merriweather; color: #00008B" class="text-center"><b>Conversations</b></h1>
+
+<div class = "d-flex align-items-center justify-content-center">
+<h6 style="font-family: Georgia; color: #7787b1 border:2px; border-style:solid; border-color:#96A1A7; padding: 1em;" class="text-center"> Use the dropdown search bar below to select who who you'd like to send a message to. Then, enter a subject header and type your message you want to send to your intended recepient.</h6>
+</div>
+
+<div class = "d-flex align-items-center justify-content-center">
 <%= form_tag conversations_path, method: :post do %>
   <div>
     <%= select_tag :user_id, options_from_collection_for_select(@recipients, :id, :name) %>
@@ -9,12 +22,12 @@
   </div>
 
   <div>
-    <%= text_area_tag :body, nil, placeholder: "Leave a comment" %>
+    <%= text_area_tag :body, nil, placeholder: "Enter Message Body Here" %>
   </div>
 
-  <%= submit_tag %>
+  <%= submit_tag "Send"%>
 <% end %>
-
+</div>
 
 <script>
 
