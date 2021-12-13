@@ -45,7 +45,7 @@ If user has not logged in yet, they will view the log in and sign up buttons an 
     <td><%= current_user.gradyear %></td>
 
    <% else %>
-   <h6 style="color: #088F8F" class="text-center"><b>Click the button below log in to your account. Don't have an account yet? Sign up now!</b></h6>
+   <h6 style="font-family: Georgia; color: #00008B" padding: 1em;" class="text-center">Click the button below log in to your account. Don't have an account yet? Sign up now!</h6>
      <div class = "d-flex align-items-center justify-content-center">
         <%= button_to "Login To Account", '/login', method: :get%>
      </div>

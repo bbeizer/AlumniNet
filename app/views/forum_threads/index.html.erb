@@ -9,39 +9,35 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
-<% if logged_in? %>
-<br>
-<div style="font-style:italic; font-weight:bold">
-    <p >You are logged in as <%= current_user.username %> </p>
+
+ 
+
+<h1 style="font-family: Merriweather; color: #00008B" class="text-center"><b>Forum Threads</b></h1>
+
+<div class = "d-flex align-items-center justify-content-center">
+<h6 style="font-family: Georgia; color: #7787b1 border:2px; border-style:solid; border-color:#96A1A7; padding: 1em;" class="text-center"> Have a passionate topic of interest you want to share and discuss with other students and alumni? Click the button below to start a conversation thread in our forum! You can also view and contribute to any existing threads listed below.</h6>
 </div>
-<p style="display:none" id="currentuser"><%= current_user.username %></p>
-<%end%>
 
 
 
-<div class="pull-right">
+<div class = "d-flex align-items-center justify-content-center">
 <%= link_to "New Thread", new_forum_thread_path, class: "btn btn-success" %>
 </div>
 
 
 
 <form action="/forum_threads" method="get">
-
-<input type="text" name="term" id="term" placeholder="Type to search">
+<h5 style="font-family: Merriweather; color: #00008B;"><b>Search Forum</b></h5>
+<input type="text" name="term" id="term" placeholder="Type to search for threads!">
 
 <input type="submit" value="Submit">
 
 </form>
-
+<h4 style="font-family: Merriweather; color: #00008B"class="text-center"><b>All Conversations</b></h4>
 
 
 <div class="container threadcontainer">
  
-
-  <h1 class="page-header">Forum Threads</h1>
-
-
-
   <%= render @forum_threads %>
 
 
