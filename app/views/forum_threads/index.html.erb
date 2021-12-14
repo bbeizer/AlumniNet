@@ -62,7 +62,7 @@ if(searchterm == null){
 }
 
 //Remove all search rows that do not contain the given search term
-var allRows = $('.threadcontainer a');
+var allRows = $('.table');
         allRows.each(function(){
             if( ! $(this).is(':contains("'+searchterm+'")'))  {
                 $(this).css({"display":"none"});
