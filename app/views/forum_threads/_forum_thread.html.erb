@@ -13,7 +13,7 @@
 <tr scope="row">
         <td><%=forum_thread.subject%></td>
         <td><%=forum_thread.created_at%></td>
-        <td><%= link_to "View Thread!", forum_thread_path(forum_thread)%></td>
+        <td><%= link_to "View Thread", forum_thread_path(forum_thread)%></td>
      <!--<h3 style="font-family: Georgia; color: #7787b1" ><%= forum_thread.subject %> - Posted by <%= forum_thread.user_id %> @ <%= forum_thread.created_at %> </h3>-->
   
 <% end %>

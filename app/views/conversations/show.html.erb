@@ -1,12 +1,11 @@
 <div>
-<h1>Subject: <%= @conversation.subject%><h1>
+<h3 style="font-family: Merriweather; color: #00008B"><b>Subject: <%= @conversation.subject%></b></h3>
 </div>
 <div>
 <%@conversation.receipts_for(current_user).each do |receipt|%>
 <div>
-<div><%=receipt.message.sender.name%> commented: </div> 
+<div><h6 class="text-muted"><b><%=receipt.message.sender.name%> messaged: </b></h6></div> 
 <p><%=receipt.message.body %></p>
-</div>
 <%end%>
 
 <%form_tag conversation_messages_path(@conversation), method: :post do %> 

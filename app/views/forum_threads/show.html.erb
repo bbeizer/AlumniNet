@@ -1,8 +1,12 @@
+<div align ="right">
+<%= button_to "Back to Community Forum", '/forum_threads', method: :get%>
+</div>
 <div class="container">
-  <h1><%= @forum_thread.subject %></h1>
-  <p class="text-muted">Created by <%= @forum_thread.user.name %></p>
+  <h3 style="font-family: Merriweather; color: #00008B"><b><%= @forum_thread.subject %></b></h3>
+  <h6 class="text-muted"><b>Post Created By: <%= @forum_thread.user.name %></b></h6>
   <%= render @forum_thread.forum_posts %>
 
   <hr />
   <%= render partial: "forum_posts/form" %>
 </div>
+

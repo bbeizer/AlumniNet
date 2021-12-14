@@ -9,18 +9,19 @@
 <p id="notice"><%= notice %></p>
 
 <% if logged_in? %>
-<br>
 <div style="font-style:italic; font-weight:bold">
-    <p >You are logged in as <%= current_user.username %> </p>
+    <p>You are logged in as <%= current_user.username %> </p>
 </div>
 <p style="display:none" id="currentuser"><%= current_user.username %></p>
 <%end%>
 
 
-<h1>Connections</h1>
-<p>This is your connections page, where you will see both your followers and the people you follow.  Click on a name to start a conversation with a connection!</p>
+<h1 style="font-family: Merriweather; color: #00008B" class="text-center"><b>Connections</b></h1>
+<h6 style="font-family: Georgia; color: #7787b1 border:2px; border-style:solid; border-color:#96A1A7; padding: 1em;" class="text-center">This is your connections page, where you will see both your followers and the people you follow.  Click on a name to start a conversation with a connection!</h6>
+
 
 <strong>
+
 <p id="followercount"></p>
 </strong>
 <div id="followerlist"></div>

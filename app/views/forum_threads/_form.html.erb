@@ -1,14 +1,14 @@
 <%= form_for @forum_thread do |f| %>
   <div class="form-group">
-    <%= f.text_area :subject, placeholder: "Subject", class: 10, class: "form-control" %>
+    <%= f.text_area :subject, placeholder: "Enter Subject Header", class: 10, class: "form-control" %>
   </div>
 
   <%= f.fields_for :forum_posts do |p| %>
   <div class= "form-group">
-  <%= p.text_area :body, placeholder: "Add a comment", rows: 10, class: "form-control" %>
+  <%= p.text_area :body, placeholder: "Add a Comment", rows: 10, class: "form-control" %>
   <%end%>
 
   <div class="form-group">
-    <%= f.submit %>
+    <%= f.submit "Post Thread"%>
   </div>
 <% end %>

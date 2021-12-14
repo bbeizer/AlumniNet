@@ -11,12 +11,12 @@ If user has not logged in yet, they will view the log in and sign up buttons an 
 <h4 style="font-family: Georgia; color: #7787b1 border:3px; border-style:solid; border-color:#96A1A7; padding: 1em;" class="text-center"><i>We are the premier social network for Brandeis students seeking connections with Brandeis alumni!</i></h4>
 <% if logged_in? %>
      <% if current_user.gradyear.to_i < 2022 %>
-     <h6 class="text-center"><i>Alumni</i></h1>
+     <h5 style= "font-family: Georgia;" class="text-center">Alumni: You are logged in, <%= current_user.username %>! </h5>
       <% else %>
-     <h6 class="text-center"><i>Student</i></h1>
+     <h5 style= "font-family: Georgia;" class="text-center">Student: You are logged in, <%= current_user.username %>!</h5>
      <%end%>
 
-      <h5 style= "font-family: Georgia;" class="text-center">You are logged in, <%= current_user.username %>!</h5>
+     
 
 
     <table class="table" style="font-family: Merriweather; color: #36454F" id="mytab2">

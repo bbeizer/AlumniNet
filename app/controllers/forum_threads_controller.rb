@@ -2,7 +2,7 @@ class ForumThreadsController < ApplicationController
     before_action :set_forum_thread, except: [:index, :new, :create]
   
     def index
-      @forum_threads = ForumThread.all 
+      @forum_threads = ForumThread.all.order(created_at: :desc)
     end
   
     def show
