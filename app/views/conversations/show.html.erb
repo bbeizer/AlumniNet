@@ -8,9 +8,9 @@
 <p><%=receipt.message.body %></p>
 <%end%>
 
-<%form_tag conversation_messages_path(@conversation), method: :post do %> 
+<%= form_tag conversation_messages_path(@conversation), method: :post do %> 
     <div>
-     <%text_area_tag :body %>
+     <%= text_area_tag :body %>
      </div>
      <%= submit_tag %>
 <%end%>
