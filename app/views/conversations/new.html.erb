@@ -29,23 +29,4 @@
 <% end %>
 </div>
 
-<script>
-
-queryString = window.location.search;
-
-urlParams = new URLSearchParams(queryString);
-
-other = urlParams.get('other');
-
-if(other.length > 0){
-  opt=document.createElement("option");
-  opt.value=other;
-  opt.innerText=other;
-  document.getElementById("user_id").appendChild(opt);
-  $("#user_id").val(other);
-}
-
-
-
-</script>
 
