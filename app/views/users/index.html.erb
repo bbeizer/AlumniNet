@@ -10,6 +10,11 @@
 
 
 
+<% if logged_in? %>
+
+<p style="display:none" id="currentuser"><%= current_user.username %></p>
+
+<%end%>
 
 
 
@@ -93,6 +98,8 @@
 
 <script>
 
+
+currentuser=document.getElementById("currentuser").innerText;
 
 var table = document.getElementById("mytab1");
 for (var i = 0, row; row = table.rows[i]; i++) {
