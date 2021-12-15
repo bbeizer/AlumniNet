@@ -46,11 +46,11 @@ If user has not logged in yet, they will view the log in and sign up buttons an 
    <% else %>
    <h6 style="font-family: Georgia; color: #00008B" padding: 1em;" class="text-center">Click the button below log in to your account. Don't have an account yet? Sign up now!</h6>
      <div class = "d-flex align-items-center justify-content-center">
-        <%= button_to "Login To Account", '/login', method: :get%>
+        <%= button_to "Login To Account", '/login', :class => "btn btn-primary", method: :get%>
      </div>
 
     <div class = "d-flex align-items-center justify-content-center">
-         <%= button_to "Sign Up!", '/signup', method: :get%>
+         <%= button_to "Sign Up!", '/signup', :class => "btn btn-success", method: :get%>
     </div>
 
         <p><div class = "d-flex align-items-center justify-content-center">
