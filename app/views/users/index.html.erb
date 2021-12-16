@@ -182,14 +182,15 @@ badusers=["axchang777@gmail.com",
 "test",
 "john chang"];
 
-var table = document.getElementById("mytab1");
-for (var i = 0, row; row = table.rows[i]; i++) {
-   for (var j = 0, col; col = row.cells[j]; j++) {
-     t=col.innerText;
-     if(badusers.includes(t)){
-	    row.remove();
-     }
-   }  
+
+for (var i = 0; i < badusers.length; i++) {
+    curfor=badusers[i];
+      var allRows = $('.table tbody tr');
+              allRows.each(function(){
+                  if( $(this).is(':contains("'+curfor+'")'))  {
+                      $(this).css({"display":"none"});
+                  }
+              });
 }
 
 </script>
