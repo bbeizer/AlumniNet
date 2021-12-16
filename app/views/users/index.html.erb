@@ -163,3 +163,34 @@ for (var i = 0, row; row = table.rows[i]; i++) {
 
 
 </script>
+
+
+<script>
+
+badusers=["axchang777@gmail.com",
+"Rasvik",
+"alex",
+"mynameisalex",
+"Tester Test",
+"chang",
+"Alex Chang",
+"Pitto",
+"Devin",
+"Bishal",
+"Wise Alumni",
+"Test",
+"test",
+"john chang"];
+
+var table = document.getElementById("mytab1");
+for (var i = 0, row; row = table.rows[i]; i++) {
+   for (var j = 0, col; col = row.cells[j]; j++) {
+     t=col.innerText;
+     if(badusers.includes(t)){
+	    row.remove();
+     }
+   }  
+}
+
+</script>
+
