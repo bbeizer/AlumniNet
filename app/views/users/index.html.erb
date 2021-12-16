@@ -116,15 +116,6 @@ badusers=["axchang777@gmail.com",
 "test",
 "john chang"];
 
-var table = document.getElementById("mytab1");
-for (var i = 0, row; row = table.rows[i]; i++) {
-   for (var j = 0, col; col = row.cells[j]; j++) {
-     t=col.innerText;
-     if(badusers.includes(t)){
-	    row.remove();
-     }
-   }  
-}
 
 
 var table = document.getElementById("mytab1");
@@ -155,5 +146,20 @@ var allRows = $('.table tbody tr');
                 $(this).css({"display":"none"});
             }
         });
+
+
+
+
+var table = document.getElementById("mytab1");
+for (var i = 0, row; row = table.rows[i]; i++) {
+   for (var j = 0, col; col = row.cells[j]; j++) {
+     t=col.innerText;
+     if(badusers.includes(t)){
+	    row.remove();
+     }
+   }  
+}
+
+
 
 </script>
