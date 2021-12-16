@@ -69,5 +69,27 @@ var allRows = $('.table');
             }
         });
 
+
+badforms=["post on 13th",
+"thread",
+"Creating new forum",
+"Testing this thread",
+"test",
+"Hi class",
+"Test forum"];
+
+for (var i = 0; i < badforms.length; i++) {
+    curfor=badforms[i];
+      var allRows = $('.table');
+              allRows.each(function(){
+                  if( $(this).is(':contains("'+curfor+'")'))  {
+                      $(this).css({"display":"none"});
+                  }
+              });
+}
+
+        
+
+
 </script>
 
