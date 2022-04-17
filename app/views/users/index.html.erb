@@ -55,7 +55,7 @@
       <th scope="col">Major</th>
       <th scope="col">Graduation Year</th>
       <th scope="col">Status</th>
-      <th scope="col">Follow</th>
+      <th scope="col">Message</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -78,13 +78,13 @@
         <%end%>
         <td>
 
-        <form action="/followers" method="post">
+        <form action="/conversations/new" method="get">
 
         <input style="display:none" type="text" name="otheruser" id="otheruser" value='<%= user.name %>'>
         <input class="user" style="display:none" type="text" name="thisuser" id="thisuser" value='<%= current_user.username %>'>
 
 
-          <input value="Follow" type="submit"></input>
+          <input value="Message" type="submit"></input>
         </form>
         
         </td>
