@@ -30,5 +30,8 @@
     </div>
 </tr>
     <%end%>
-    <%= button_to "New Conversation", conversations_new_path%>
+         <form action="/conversations/new" method="get">
+          <input value="Message Users" type="submit" style="color:blue;"> </input>
+        </form>
+
  
