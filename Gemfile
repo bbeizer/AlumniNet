@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.1'
 
+
+ruby '3.0.1'
+gem "sprockets-rails"
 gem 'bootstrap-sass', '~> 3.3.6'
+gem "jquery-ui-rails"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'

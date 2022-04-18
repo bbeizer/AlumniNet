@@ -1,21 +1,15 @@
-
-<tr>
 <table class="table" style="font-family: Merriweather; color: #36454F border:2px; border-style:solid; border-color:#96A1A7; padding: 1em" id="mytab4">
- <thead>
- <tr scope>
-      <th scope="col">Subject</th>
-      <th scope="col">Date/Time Posted</th>
-      <th scope="col">Link to Thread</th>
-      
-</tr>
-</thead>
+   <tr>
+    <th>Subject</th>
+    <th>Date/Time Posted</th>
+    <th>Link to Thread</th>
+  </tr>
+<tr>
 <%= link_to forum_thread do |f|%>
-<tr scope="row">
+     <tr>
         <td><%=forum_thread.subject%></td>
         <td><%=forum_thread.created_at%></td>
         <td><%= link_to "View Thread", forum_thread_path(forum_thread)%></td>
-     <!--<h3 style="font-family: Georgia; color: #7787b1" ><%= forum_thread.subject %> - Posted by <%= forum_thread.user_id %> @ <%= forum_thread.created_at %> </h3>-->
-  
+     </tr>
 <% end %>
-
-</tr>
+</table>

@@ -20,6 +20,10 @@
  @import "bootstrap";
  */
 
+ /*
+ *= require jquery-ui
+ */
+
  .forum_post {
   border-top: 1px solid #ccc;
   padding: 8px 0px;
