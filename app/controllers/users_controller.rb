@@ -32,6 +32,17 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end
 
+    def search_name
+      @users = User.where("name LIKE ?", "%" + params[:q] + "%")
+    end
+
+    def search_major
+      @users = User.where("major LIKE ?", "%" + params[:q] + "%")
+    end
+
+    def search_interest
+      @users = User.where("interests LIKE ?", "%" + params[:q] + "%")
+    end
 
     private
 

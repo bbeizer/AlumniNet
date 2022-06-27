@@ -20,7 +20,9 @@ Rails.application.routes.draw do
   resources :users
   get '/alumni', to: 'users#alumni'
   get '/student', to: 'users#student'
-  resources :enrollments
+  get '/searchName', to: 'users#search_name'
+  get '/searchInterest', to: 'users#search_interest'
+  get '/searchMajor', to: 'users#search_major'
 
   #session routes
   get '/welcome', to: 'sessions#welcome'
@@ -31,6 +33,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/logout', to: 'sessions#destroy' 
   get '/search', to: 'search#search'
+  get '/searchName', to: 'users#search_name'
+
   post '/conversations/new', to:  'conversations#new'
 
 
