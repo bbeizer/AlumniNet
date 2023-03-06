@@ -6,16 +6,16 @@ Link to Heroku: https://sleepy-escarpment-10704.herokuapp.com
 # Brief Product Overview
 AlumniNet is a social networking website for Brandeis students to connect with Brandeis alumni.  
 
-Most seniors graduating from college can safely say how it's really hard to find out about compelling work opportunities in the real world. It can get stressful when come time for graduation and one still has not secured career plans for post graduation. Therefore, we wanted to create a platform where Brandei students can specifically reach out to Brandeis alumni who have recetnyl graduated and now in the work industry to ask about tips and tricks on ways to secure work opportunities in fields they are interested in. Students can find and follow alumni who are of expertise in the field they are looking to go into to ask about career advice and opportunities. 
+Most seniors graduating from college experience difficulty finding out about work opportunities in the real world. Therefore, we wanted to create a platform where Brandeis students can reach out to Brandeis alumni to get insights into work opportunities in fields in which they are interested. Students can find and follow alumni with expertise in various fields and ask them about career advice and opportunities. 
 
 The features that are available for students to interact with Brandeis alumni through our platform are as follows:
 
-All_Users: A directory that lists all users both alumni and students that are affiliated with the platform.
-Conversations: A messaging chat feature where students can chat with alumni about topics of interest as a DM
-Community Forum: A global forum where users can start threads about popular topics of interests and/or questions that can be answered by alumni to benefit the entire AlumniNet community.
-Connections: A profile page where the current logged in user can view both their followers and people they follow. There is also a direct link next to each user the current logged in user follows that can be clikced to directly message them.
-FeedBack: A embedded google survey feedback page where users can tell us aspects they like and dislike about our platform so that we can continue to better our platform because, after all, user experience is one of our important factors!
-Logout: Simple logout functionality included in navbar.
+• All_Users: A directory that lists all users both alumni and students that are affiliated with the platform.
+•Conversations: A messaging chat feature where students can chat with alumni about topics of interest as a DM
+• Community Forum: A global forum where users can start threads about popular topics of interest and/or questions that can be answered by alumni to benefit the entire AlumniNet community.
+• Connections: A profile page where the currently logged-in user can view both their followers and the people they follow. There is also a direct link next to each user the currently logged-in user follows that can be clicked to directly message them.
+• Feedback: A embedded google survey feedback page where users can tell us aspects they like and dislike about our platform so that we can continue to better our platform because, after all, user experience is one of our important factors!
+• Logout: Simple logout functionality is included in the navbar.
 
 
 ## URL Patterns:
