@@ -10,10 +10,10 @@ Most seniors graduating from college experience difficulty finding out about wor
 
 The features that are available for students to interact with Brandeis alumni through our platform are as follows:
 
-• All_Users: A directory that lists all users both alumni and students that are affiliated with the platform
+• All_Users: A directory that lists all users, both alumni and students, that are affiliated with the platform.
 
 
-•Conversations: A messaging chat feature where students can chat with alumni about topics of interest as a DM
+•Conversations: A messaging chat feature where students can chat with alumni about topics of interest as a DM.
 
 
 • Community Forum: A global forum where users can start threads about popular topics of interest and/or questions that can be answered by alumni to
