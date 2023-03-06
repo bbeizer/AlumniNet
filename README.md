@@ -23,7 +23,7 @@ benefit the entire AlumniNet community.
 • Connections: A profile page where the currently logged-in user can view both their followers and the people they follow. There is also a direct link next to each user the currently logged-in user follows that can be clicked to directly message them.
 
 
-• Feedback: A embedded google survey feedback page where users can tell us aspects they like and dislike about our platform so that we can continue to better our platform because, after all, user experience is one of our important factors!
+• Feedback: A embedded google survey feedback page where users can tell us aspects they like and dislike about our platform so that we can continue to improve our platform and optimize user experience.
 
 
 • Logout: Simple logout functionality is included in the navbar.
