@@ -10,11 +10,22 @@ Most seniors graduating from college experience difficulty finding out about wor
 
 The features that are available for students to interact with Brandeis alumni through our platform are as follows:
 
-• All_Users: A directory that lists all users both alumni and students that are affiliated with the platform.
+• All_Users: A directory that lists all users both alumni and students that are affiliated with the platform
+
+
 •Conversations: A messaging chat feature where students can chat with alumni about topics of interest as a DM
-• Community Forum: A global forum where users can start threads about popular topics of interest and/or questions that can be answered by alumni to benefit the entire AlumniNet community.
+
+
+• Community Forum: A global forum where users can start threads about popular topics of interest and/or questions that can be answered by alumni to
+benefit the entire AlumniNet community.
+
+
 • Connections: A profile page where the currently logged-in user can view both their followers and the people they follow. There is also a direct link next to each user the currently logged-in user follows that can be clicked to directly message them.
+
+
 • Feedback: A embedded google survey feedback page where users can tell us aspects they like and dislike about our platform so that we can continue to better our platform because, after all, user experience is one of our important factors!
+
+
 • Logout: Simple logout functionality is included in the navbar.
 
 
