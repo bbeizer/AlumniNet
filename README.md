@@ -6,7 +6,7 @@ Link to Heroku: https://sleepy-escarpment-10704.herokuapp.com
 # Brief Product Overview
 AlumniNet is a social networking website for Brandeis students to connect with Brandeis alumni.  
 
-Most seniors graduating from college experience difficulty finding out about work opportunities in the real world. Therefore, we wanted to create a platform where Brandeis students can reach out to Brandeis alumni to get insights into work opportunities in fields in which they are interested. Students can find and follow alumni with expertise in various fields and ask them about career advice and opportunities. 
+Most seniors graduating from college experience difficulty finding out about work opportunities in the real world. Therefore, we wanted to create a platform where Brandeis students could reach out to Brandeis alumni to get insights into work opportunities in fields in which they are interested. Students can find and follow alumni with expertise in various fields and ask them about career advice and opportunities. 
 
 The features that are available for students to interact with Brandeis alumni through our platform are as follows:
 
